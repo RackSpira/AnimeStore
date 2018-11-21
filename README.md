@@ -4,13 +4,13 @@
 
 ```scheme
 1. Clone this repository to $GOPATH/src/github.com/joedha8/
-2. Create `animestoredb` in Postgres
-3. Import `animestoredb.sql` in files directory
+2. Create "animestoredb" in Postgres
+3. Import "animestoredb.sql" in files directory
 
-`psql animestoredb < animestoredb.sql`
+"psql animestoredb < animestoredb.sql"
 
 4. Run `./AnimeStore` to run the server
-5. Then, open browser and go to `http://localhost:1212`
+5. Then, open browser and go to "http://localhost:1212"
 ```
 
 ## RESTful API
@@ -18,8 +18,11 @@
 ### Category
 
 Delete  : `http://localhost:1212/category/{id}`
+
 Get All : `http://localhost:1212/category`
+
 Get One : `http://localhost:1212/category/{id}`
+
 Insert  : `http://localhost:1212/category`
 
 With Body
@@ -44,8 +47,11 @@ With Body
 ### Detail Order
 
 Delete  : `http://localhost:1212/detail_order/{id}`
+
 Get All : `http://localhost:1212/detail_order`
+
 Get One : `http://localhost:1212/detail_order/{id}`
+
 Insert  : `http://localhost:1212/detail_order`
 
 With Body
@@ -74,8 +80,11 @@ With Body
 ### Order
 
 Delete  : `http://localhost:1212/order/{id}`
+
 Get All : `http://localhost:1212/order`
+
 Get One : `http://localhost:1212/order/{id}`
+
 Insert  : `http://localhost:1212/order`
 
 With Body
@@ -101,8 +110,11 @@ With Body
 ### Product
 
 Delete  : `http://localhost:1212/product/{id}`
+
 Get All : `http://localhost:1212/product`
+
 Get One : `http://localhost:1212/product/{id}`
+
 Insert  : `http://localhost:1212/product`
 
 With Body
@@ -134,8 +146,11 @@ With Body
 ### Wishlist
 
 Delete  : `http://localhost:1212/wishlist/{id}`
+
 Get All : `http://localhost:1212/wishlist`
+
 Get One : `http://localhost:1212/wishlist/{id}`
+
 Insert  : `http://localhost:1212/wishlist`
 
 With Body
