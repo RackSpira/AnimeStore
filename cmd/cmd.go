@@ -35,11 +35,40 @@ var rootCmd = &cobra.Command{
 		r := mux.NewRouter()
 
 		// RESTful API
-		r.HandleFunc("/products", router.GetAllProduct).Methods("GET")
-		r.HandleFunc("/products/{id}", router.GetOneProduct).Methods("GET")
-		r.HandleFunc("/products", router.InsertProduct).Methods("POST")
-		r.HandleFunc("/products/{id}", router.UpdateProduct).Methods("POST")
-		r.HandleFunc("/products/{id}", router.DeleteProduct).Methods("DELETE")
+		// Product
+		r.HandleFunc("/product", router.GetAllProduct).Methods("GET")
+		r.HandleFunc("/product/{id}", router.GetOneProduct).Methods("GET")
+		r.HandleFunc("/product", router.InsertProduct).Methods("POST")
+		r.HandleFunc("/product/{id}", router.UpdateProduct).Methods("POST")
+		r.HandleFunc("/product/{id}", router.DeleteProduct).Methods("DELETE")
+
+		//Category
+		r.HandleFunc("/category", router.GetAllCategory).Methods("GET")
+		r.HandleFunc("/category/{id}", router.GetOneCategory).Methods("GET")
+		r.HandleFunc("/category", router.InsertCategory).Methods("POST")
+		r.HandleFunc("/category/{id}", router.UpdateCategory).Methods("POST")
+		r.HandleFunc("/category/{id}", router.DeleteCategory).Methods("DELETE")
+
+		//Detail Order
+		r.HandleFunc("/detail_order", router.GetAllDetailOrder).Methods("GET")
+		r.HandleFunc("/detail_order/{id}", router.GetOneDetailOrder).Methods("GET")
+		r.HandleFunc("/detail_order", router.InsertDetailOrder).Methods("POST")
+		r.HandleFunc("/detail_order/{id}", router.UpdateDetailOrder).Methods("POST")
+		r.HandleFunc("/detail_order/{id}", router.DeleteDetailOrder).Methods("DELETE")
+
+		//Order
+		r.HandleFunc("/order", router.GetAllOrder).Methods("GET")
+		r.HandleFunc("/order/{id}", router.GetOneOrder).Methods("GET")
+		r.HandleFunc("/order", router.InsertOrder).Methods("POST")
+		r.HandleFunc("/order/{id}", router.UpdateOrder).Methods("POST")
+		r.HandleFunc("/order/{id}", router.DeleteOrder).Methods("DELETE")
+
+		//Wishlist
+		r.HandleFunc("/wishlist", router.GetAllWishlist).Methods("GET")
+		r.HandleFunc("/wishlist/{id}", router.GetOneWishlist).Methods("GET")
+		r.HandleFunc("/wishlist", router.InsertWishlist).Methods("POST")
+		r.HandleFunc("/wishlist/{id}", router.UpdateWishlist).Methods("POST")
+		r.HandleFunc("/wishlist/{id}", router.DeleteWishlist).Methods("DELETE")
 
 		fmt.Println("Listening on", fmt.Sprintf("http://localhost:%d", viper.GetInt("app.port")))
 		http.ListenAndServe(fmt.Sprintf(":%d", viper.GetInt("app.port")), r)

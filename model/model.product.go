@@ -3,7 +3,6 @@ package model
 import (
 	"context"
 	"database/sql"
-	"fmt"
 	"time"
 
 	"github.com/lib/pq"
@@ -72,10 +71,7 @@ func GetOneProduct(ctx context.Context, db *sql.DB, ID uuid.UUID) (ProductModel,
 
 func (product ProductModel) Insert(ctx context.Context, db *sql.DB) (uuid.UUID, error) {
 	var id uuid.UUID
-
-	fmt.Println(product)
-
-	query := `INSERT INTO "product"(id, id_category, description, price, stock, product_name, created_at, created_by)VALUES(uuid_generate_v4(), $1, $2, $3, $4, $5, now(), $6) RETURNING id`
+	query := `INSERT INTO "product"(id_category, description, price, stock, product_name, created_at, created_by)VALUES($1, $2, $3, $4, $5, now(), $6) RETURNING id`
 	err := db.QueryRowContext(ctx, query,
 		product.IDCategory,
 		product.Description,
