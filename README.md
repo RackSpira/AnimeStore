@@ -9,8 +9,23 @@
 
 "psql animestoredb < animestoredb.sql"
 
-4. Run `./AnimeStore` to run the server
+4. Run "./AnimeStore" to run the server
 5. Then, open browser and go to "http://localhost:1212"
+```
+
+### OR
+
+```scheme
+1. Clone this repository to $GOPATH/src/github.com/joedha8/
+2. Create "animestoredb" in Postgres
+3. Import "animestoredb.sql" in files directory
+
+"psql animestoredb < animestoredb.sql"
+
+4. Run "go run main.go" to run the server
+5. if any error that say cannot find package, run "dep ensure"
+6. Then run "go run main.go" again
+7. And open browser and go to "http://localhost:1212"
 ```
 
 ## RESTful API

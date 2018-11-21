@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/AuthScureDevelopment/lib-arjuna/logging"
 	"github.com/gomodule/redigo/redis"
+	"github.com/joedha8/AnimeStore/logging"
 )
 
 var (

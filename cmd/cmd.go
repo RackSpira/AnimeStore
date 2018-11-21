@@ -8,11 +8,11 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/AuthScureDevelopment/lib-arjuna/cache"
-	"github.com/AuthScureDevelopment/lib-arjuna/db"
-	"github.com/AuthScureDevelopment/lib-arjuna/logging"
 	"github.com/gomodule/redigo/redis"
 	"github.com/gorilla/mux"
+	"github.com/joedha8/AnimeStore/cache"
+	"github.com/joedha8/AnimeStore/db"
+	"github.com/joedha8/AnimeStore/logging"
 	"github.com/joedha8/AnimeStore/router"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
